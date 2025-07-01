@@ -99,9 +99,24 @@ Set your desired username, email, and password.
 ```bash
 python manage.py runserver
 ```
-Access Admin Panel: http://127.0.0.1:8000/admin
+Now go to 
 
-View Plate Logs: http://127.0.0.1:8000/api/plates/
+— for admin login
+```bash
+http://127.0.0.1:8000/admin
+```
+— to view logs
+```bash
+http://127.0.0.1:8000/api/plates/
+```
+---
+
+#### 9. Test Plate Detection
+i. Put an image like test_plate.jpg in the project folder.
+ii. open another terminal, go to your project folder and source venv/bin/activate
+```bash
+python ocr_test.py
+```
 ---
 
 ### 📄 `LICENSE` File (Demo Only)
