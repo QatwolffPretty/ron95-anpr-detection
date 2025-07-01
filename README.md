@@ -39,7 +39,7 @@ ron95-anpr-detection/
 
 ---
 
-## 🚀 How to Run (Termux Example)
+## 🚀 How to Run (Termux)
 
 ```bash
 pkg update
@@ -52,7 +52,7 @@ python manage.py runserver
 ```
 ---
 
-### 📄 `LICENSE` File (Custom – Demo Only)
+### 📄 `LICENSE` File (Demo Only)
 
 ```text
 Copyright (c) 2025 Siti Nur Afiqah Nadzim
