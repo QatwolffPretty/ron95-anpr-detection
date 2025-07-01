@@ -1,0 +1,11 @@
+easyocr
+opencv-python
+requests
+django
+djangorestframework
+mysqlclient
+pillow
+numpy
+scikit-image
+imageio
+torch
