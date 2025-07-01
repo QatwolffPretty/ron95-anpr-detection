@@ -8,48 +8,100 @@ It is designed to detect **foreign-registered vehicles** at petrol stations usin
 ---
 
 ## 🔧 Tech Stack
-- 🐍 Python (OpenCV + EasyOCR) – Plate detection
-- 🌐 Django REST – API backend for logging
-- 🧾 MySQL – Database storage
-- 🖥️ Node.js (planned) – Admin dashboard (WIP)
-- 📱 Termux compatibility – For Android edge device testing
+- 🐍 **Python** (`OpenCV`, `EasyOCR`) – Plate Detection  
+- 🌐 **Django REST Framework** – API Backend for Plate Logging  
+- 🧾 **MySQL** – Database Storage  
+- 🖥️ **Node.js** *(Planned)* – Admin Dashboard *(WIP)*  
+- 📱 **Termux Compatible** – For Android use  
+- 🐧 **Linux & Windows Compatible**  
 
 ---
 
 ## 📂 Project Structure
-ron95-anpr-detection/
-├── plate-reader/         
-#### Python EasyOCR for reading license plates
-
-│   └── ocr_test.py       
-#### Test script for recognition
-
-├── backend/            
-#### Django REST API
-
-│   ├── recognition/     
-#### Django app (models, views, serializers)
-
-│   └── anpr_api/         
-#### Project settings
-
-├── dashboard/           
-#### Node.js admin dashboard (coming soon)
-└── README.md
-
----
-
-## 🚀 How to Run (Termux)
 
 ```bash
-pkg update
-pkg install python git nodejs mariadb
-pip install easyocr opencv-python django djangorestframework mysqlclient
-cd plate-reader
-python ocr_test.py
-cd backend
+ron95-anpr-detection/
+├── anpr/
+│ ├── admin.py
+│ ├── apps.py
+│ ├── models.py
+│ ├── serializers.py
+│ ├── urls.py
+│ └── views.py
+├── backend/
+│ ├── settings.py
+│ └── urls.py
+├── manage.py
+├── ocr_test.py
+├── README.md
+└── requirements.txt
+```
+---
+
+### ⚙️ Setup (Linux, Termux, Windows)
+
+#### 1. Clone the Repository
+
+```bash
+git clone https://github.com/QatwolffPretty/ron95-anpr-detection.git
+cd ron95-anpr-detection
+```
+---
+
+#### 2. Create a Virtual Environment
+Linux/Termux
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+---
+
+#### 3. Install Required Packages
+```bash
+pip install -r requirements.txt
+```
+---
+
+#### 4. Setup your MySQL
+Login to MySQL:
+```bash
+mysql -u root -p
+```
+Create the database and user:
+```bash
+CREATE DATABASE anpr_db;
+CREATE USER 'django'@'localhost' IDENTIFIED BY 'yourpassword';
+GRANT ALL PRIVILEGES ON anpr_db.* TO 'django'@'localhost';
+FLUSH PRIVILEGES;
+```
+---
+
+#### 5. Run Django Migrations
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+---
+
+#### 6. Create Superuser (Optional but Recommended)
+```bash
+python manage.py createsuperuser
+```
+Set your desired username, email, and password.
+---
+
+#### 7. Run Django Development Server
+```bash
 python manage.py runserver
 ```
+Access Admin Panel: http://127.0.0.1:8000/admin
+
+View Plate Logs: http://127.0.0.1:8000/api/plates/
 ---
 
 ### 📄 `LICENSE` File (Demo Only)
