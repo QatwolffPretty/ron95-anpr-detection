@@ -8,12 +8,11 @@ It is designed to detect **foreign-registered vehicles** at petrol stations usin
 ---
 
 ## 🔧 Tech Stack
-- 🐍 **Python** (`OpenCV`, `EasyOCR`) – Plate Detection  
-- 🌐 **Django REST Framework** – API Backend for Plate Logging  
-- 🧾 **MySQL** – Database Storage  
-- 🖥️ **Node.js** *(Planned)* – Admin Dashboard *(WIP)*  
-- 📱 **Termux Compatible** – For Android use  
-- 🐧 **Linux & Windows Compatible**  
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=py,git,django,linux,mysql,nodejs,windows,opencv" />
+  </a>
+</p>
 
 ---
 
