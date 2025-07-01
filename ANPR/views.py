@@ -14,8 +14,10 @@ def plate_logs(request):
         serializer = PlateLogSerializer(logs, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
+        print("Incoming POST data:", request.data)
         serializer = PlateLogSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({"status": "success", "data": serializer.data})
+        print("Validation errors:", serializer.errors)
         return Response(serializer.errors, status=400)
