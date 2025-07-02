@@ -158,5 +158,6 @@ Below are the team members involved and their respective roles.
 | -------------------------- | ------------------------------------------------------------------------------- | -------------------------- |
 | **Siti Nur Afiqah Nadzim** | [@QatwolffPretty](https://github.com/QatwolffPretty)                            | Project Manager            |
 | **xfnx**                   | [@xfnx-17](https://github.com/xfnx-17)                                          | System Analyst             |
+| **Sang Kancil**            | [@SANGKANCIL-MY](https://github.com/SANGKANCIL-MY)                              | QA Specialist              |
 
 ---
