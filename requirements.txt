@@ -9,3 +9,7 @@ numpy
 scikit-image
 imageio
 torch
+matplotlib
+ultralytics
+paddleocr
+paddlepaddle
