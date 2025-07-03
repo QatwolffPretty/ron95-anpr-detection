@@ -31,11 +31,11 @@ ron95-anpr-detection/
 │ ├── settings.py
 │ └── urls.py
 ├── runs/detect/train
-|   ├── weights/
-|   |   ├── best.pt
-|   |    └── last.pt
-|   ├── args.yaml
-|   └── ......
+│   ├── weights/
+│   │   ├── best.pt
+│   │    └── last.pt
+│   ├── args.yaml
+│   └── ...
 ├── manage.py
 ├── ocr_test.py
 ├── README.md
