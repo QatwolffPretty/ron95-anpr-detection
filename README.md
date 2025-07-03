@@ -30,6 +30,12 @@ ron95-anpr-detection/
 ├── backend/
 │ ├── settings.py
 │ └── urls.py
+├── runs/detect/train
+|   ├── weights/
+|   |   ├── best.pt
+|   |    └── last.pt
+|   ├── args.yaml
+|   └── ......
 ├── manage.py
 ├── ocr_test.py
 ├── README.md
@@ -51,11 +57,15 @@ cd ron95-anpr-detection
 Linux/Termux
 ```bash
 python3 -m venv venv
+```
+```bash
 source venv/bin/activate
 ```
 Windows
 ```bash
 python -m venv venv
+```
+```bash
 venv\Scripts\activate
 ```
 ---
@@ -77,6 +87,7 @@ CREATE DATABASE anpr_db;
 CREATE USER 'django'@'localhost' IDENTIFIED BY 'yourpassword';
 GRANT ALL PRIVILEGES ON anpr_db.* TO 'django'@'localhost';
 FLUSH PRIVILEGES;
+EXIT;
 ```
 ---
 
