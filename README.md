@@ -123,7 +123,7 @@ http://127.0.0.1:8000/api/plates/
 
 #### 9. Test Plate Detection
 i. Put an image like test_plate.jpg in the project folder.\
-ii. open another terminal, go to your project folder and source venv/bin/activate
+ii. Open another terminal, go to your project folder and source venv/bin/activate
 ```bash
 python ocr_test.py
 ```
