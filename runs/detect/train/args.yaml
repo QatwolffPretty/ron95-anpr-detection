@@ -102,4 +102,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\Users\xfnx\Desktop\ron95-anpr-detection\runs\detect\train5
+
