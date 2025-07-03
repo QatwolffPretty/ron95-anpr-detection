@@ -33,7 +33,7 @@ ron95-anpr-detection/
 ├── runs/detect/train
 │   ├── weights/
 │   │   ├── best.pt
-│   │    └── last.pt
+│   │   └── last.pt
 │   ├── args.yaml
 │   └── ...
 ├── manage.py
