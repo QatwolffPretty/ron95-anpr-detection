@@ -43,12 +43,12 @@ if plate_crop is None:
 
 cv2.imwrite("temp_crop.jpg", plate_crop)
 cv2.imshow("Plate Crop", plate_crop)
-cv2.waitKey(0)
+cv2.waitKey(1000)
 cv2.destroyAllWindows()
 
 ocr_results = ocr.ocr("temp_crop.jpg")
-print("[DEBUG] Raw OCR Results:")
-print(ocr_results)
+#print("[DEBUG] Raw OCR Results:")
+#print(ocr_results)
 
 texts = []
 confidences = []
@@ -65,19 +65,22 @@ if not texts or not confidences:
     exit()
 
 avg_conf = sum(confidences) / len(confidences)
-print(f"[DEBUG] OCR result: '{' '.join(texts)}' with avg confidence {avg_conf:.2f}")
+#print(f"[DEBUG] OCR result: '{' '.join(texts)}' with avg confidence {avg_conf:.2f}")
 
 if avg_conf < CONFIDENCE_THRESHOLD:
     print(f"[SKIP] Low confidence ({avg_conf:.2f})")
     exit()
 
 plate_number = ''.join(texts).replace(" ", "").upper()
-data = {"plate_number": plate_number}
+data = {
+    "plate_number": plate_number,
+    "confidence": avg_conf
+}
 headers = {'Content-Type': 'application/json'}
 
 try:
     response = requests.post(API_ENDPOINT, data=json.dumps(data), headers=headers)
-    if response.status_code == 201:
+    if response.status_code in (200, 201):
         print(f"[SUCCESS] Plate logged: {plate_number}")
     else:
         print(f"[FAILURE] API error {response.status_code}: {response.text}")
