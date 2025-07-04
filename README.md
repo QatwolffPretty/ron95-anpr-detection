@@ -56,17 +56,17 @@ cd ron95-anpr-detection
 #### 2. Create a Virtual Environment
 Linux/Termux
 ```bash
-python3 -m venv venv
+python3.10 -m venv RON95
 ```
 ```bash
-source venv/bin/activate
+source RON95/bin/activate
 ```
 Windows
 ```bash
-python -m venv venv
+python3.10 -m venv RON95
 ```
 ```bash
-venv\Scripts\activate
+RON95\Scripts\activate
 ```
 ---
 
